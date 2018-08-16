@@ -1,0 +1,54 @@
+<div class="p-0" style="background-color: #ff4081 !important;">
+  <div  fxLayout="column"
+        class="p-2 shadow"
+        fxLayoutAlign="start center">
+    <div  fxFlexAlign="center"><h6 class="p-2 m-0" style="color: white">Connections
+      <mat-icon style="vertical-align: middle; ">fiber_smart_record</mat-icon></h6> </div>
+  </div>
+
+  <div  fxLayout="row"
+        style="color: white"
+        class="p-2" fxLayoutAlign="space-between center">
+    <div  fxFlexAlign="center">  <h6 class="w-100 p-3 text-left m-0" style="padding-bottom: 2px !important;">
+      Suggested Contacts
+    </h6></div>
+    <div  fxFlexAlign="center"><button mat-button><mat-icon class="m-2">toc</mat-icon></button></div>
+  </div>
+
+
+
+  <div fxLayout="row"
+       fxLayoutGap="30px" cdkScrollable
+       style="word-wrap: break-word; overflow: auto;
+           padding-bottom: 2.5vh !important;
+       border: none !important;outline: none !important;">
+    <mat-card *ngFor="let i of quickMode_array; index as x"
+              class="p-2 m-2 hero_card-border shadow">
+      <div fxLayout="column" class="text-center p-1">
+        <div style="white-space: pre-line; width: 43vw;">
+          <p class="lead">{{i.title}}</p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" >
+          <div fxFlexAlign="center">
+            <button   mat-fab color="accent">
+              <mat-icon>whatshot</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+
+
+  <div  fxLayout="row"
+        class="p-2 bg-light" fxLayoutAlign="space-between center">
+    <div  fxFlexAlign="center"><p class="lead m-1 p-2" style="padding-top: 0">Around Me</p></div>
+    <div  fxFlexAlign="center"><mat-icon class="m-2">add_circle_outline</mat-icon></div>
+  </div>
+
+
+  <div fxLayout="column" cdkScrollable>
+    <mat-card  *ngFor="let i of messageArr" class="p-4 w-100">Simple card</mat-card>
+  </div>
+</div>

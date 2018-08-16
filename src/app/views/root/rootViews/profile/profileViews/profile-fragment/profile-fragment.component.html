@@ -1,0 +1,67 @@
+<div fxLayout="column" fxLayoutGap="20px">
+
+  <div>
+    <mat-card>
+      <p class="lead">About Me</p>
+      <mat-card-content>
+                   <textarea rows="4" class="w-100 border-0">The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originallybred for hunting.</textarea>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-card>
+      <div  fxLayout="row" fxLayoutAlign="space-between center" >
+        <div><p class="lead">Gender</p></div>
+        <div><p class="lead">Male</p></div>
+      </div>
+      <mat-card-content>
+        <div  fxLayout="row" fxLayoutAlign="space-around center" >
+          <div> <button  mat-stroked-button>Male</button></div>
+          <div> <button mat-stroked-button>Female</button></div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+  <div>
+    <mat-card>
+      <div  fxLayout="row" fxLayoutAlign="space-between center" >
+        <div><p class="lead">My Age</p></div>
+        <div><p class="lead">24</p></div>
+      </div>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="20px">
+          <div  fxLayout="row" fxLayoutAlign="space-between center" >
+            <mat-slider class="w-100"></mat-slider>
+          </div>
+        </div>
+      </mat-card-content>
+      <small class="text-muted">
+        Freedl uses these preferences to suggest matches.Some match suggestions may not fall within your desired parameters.
+      </small>
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-card>
+      <mat-card-content>
+        <div  fxLayout="row" fxLayoutAlign="space-between center" >
+          <div><p class="lead">Don't Show My Age</p></div>
+          <div><mat-slide-toggle></mat-slide-toggle></div>
+        </div>
+        <div  fxLayout="row" fxLayoutAlign="space-between center" >
+          <div><p class="lead">Make My Distance Visible</p></div>
+          <div><mat-slide-toggle></mat-slide-toggle></div>
+        </div>
+      </mat-card-content>
+      <small class="text-muted">
+        You won't show up in the card stack but can still message your existing matches.
+      </small>
+    </mat-card>
+  </div>
+
+
+
+</div>

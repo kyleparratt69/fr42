@@ -1,0 +1,50 @@
+<div class="p-0"
+     fxLayout="column">
+  <div fxFlex style="z-index: 999">
+  <div  fxLayout="column"
+        class="p-2 shadow"
+        style="background-color: #ff4081 !important;"
+        fxLayoutAlign="start center">
+    <div  fxFlexAlign="center"><h6 class=" p-2 m-0" style="color: white">Thee Social Hub
+      <mat-icon style="vertical-align: middle; ">trending_up</mat-icon></h6></div>
+  </div>
+</div>
+  <div #gmapElement style="width: 100vw;height: 100vh" class="position-fixed">.</div>
+  <div fxLayout="column"
+       [@flyInOut]="suggestion_isVisible"
+       class="fixed-bottom"
+       fxLayoutAlign="centre none">
+
+    <div  fxLayout="row"
+          style="color: white"
+          class="p-2" fxLayoutAlign="space-between center">
+      <div  fxFlexAlign="center">  <h6 class="w-100 p-3 text-left m-0" style="padding-bottom: 2px !important;">
+        Trending Now
+      </h6></div>
+      <div  fxFlexAlign="center"><button mat-button><mat-icon class="m-2">toc</mat-icon></button></div>
+    </div>
+    <div fxLayout="row"
+         fxLayoutGap="30px" cdkScrollable
+         style="word-wrap: break-word; overflow: auto;
+       padding-bottom: 2.5vh !important;
+       border: none !important;outline: none !important;">
+      <mat-card *ngFor="let i of quickMode_array; index as x"
+                class="p-2 m-2 hero_card-border shadow">
+        <div fxLayout="column" class="text-center p-1">
+          <div style="white-space: pre-line; width: 43vw;">
+            <p class="lead">{{i.title}}</p>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="center center" >
+            <div fxFlexAlign="center">
+              <button   mat-fab color="accent">
+                <mat-icon>{{i.icon}}</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+

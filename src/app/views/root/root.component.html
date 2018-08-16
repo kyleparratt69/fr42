@@ -1,0 +1,32 @@
+<mat-tab-group mat-stretch-tabs
+               backgroundColor="accent"
+               color="accent"
+               class="bg-light">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">account_circle</mat-icon>
+    </ng-template>
+    <app-profile></app-profile>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">whatshot</mat-icon>
+    </ng-template>
+    <app-home></app-home>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon"  matBadge="15">mode_comment</mat-icon>
+    </ng-template>
+    <app-messages></app-messages>
+  </mat-tab>
+</mat-tab-group>
+<div  fxLayout="row"
+      [@header_toggle]="isVisible"
+      style="background-color: #ff4081 !important; color: white"
+      class="p-2 bg-light fixed-bottom" fxLayoutAlign="space-between center">
+  <div  fxFlexAlign="center"><h6 class="w-100 p-3 text-left" style="padding-bottom: 2px !important;">
+    Activity Feed
+  </h6></div>
+  <div  fxFlexAlign="center"><button mat-button><mat-icon class="m-1">toc</mat-icon></button></div>
+</div>

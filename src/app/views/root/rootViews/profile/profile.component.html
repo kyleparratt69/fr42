@@ -1,0 +1,63 @@
+<div class="p-0 shadow">
+  <div  fxLayout="column"
+        class="p-2 shadow"
+        style="background-color: #ff4081 !important;"
+        fxLayoutAlign="start center">
+    <div  fxFlexAlign="center"><h6 class="p-2 m-0" style="color: white">My Profile</h6></div>
+  </div>
+
+  <div fxLayout="column" fxLayoutGap="20px">
+    <div>
+      <mat-card style="box-shadow: none !important; background-color: transparent;">
+        <div class="w-50 p-2 m-auto" fxLayoutAlign="center center" >
+          <qrcode [usesvg]="true" [qrdata]="'Your QR code data string'" [level]="'M'" class="p-2"></qrcode>
+        </div>
+        <mat-card-header class="profileHeader">
+          <mat-card-title><h4>Kyle Parratt</h4></mat-card-title>
+          <mat-card-subtitle>kylefunguy13 | 3 | Leo</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-chip-list class="p-2">
+            <mat-chip>Popular</mat-chip>
+            <mat-chip color="accent" selected>Picky</mat-chip>
+            <mat-chip color="accent" selected>Hot</mat-chip>
+          </mat-chip-list>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="toggleSettings(1)">EDIT PROFILE</button>
+          <button mat-button (click)="toggleSettings(2)">SETTINGS</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+<div class="p-0 bg-light" *ngIf="settingsTabOpen == 1">
+  <div  fxLayout="row"
+        class="p-2 shadow"
+        (click)="toggleSettings(0)" fxLayoutAlign="space-between center">
+    <div  fxFlexAlign="center"><p class="lead p-2 m-0">Edit Profile</p></div>
+    <div  fxFlexAlign="center"><mat-icon class="example-tab-icon">close</mat-icon></div>
+  </div>
+  <hr style="margin-top: 0rem;">
+  <app-profile-fragment></app-profile-fragment>
+</div>
+
+<div class="p-0 bg-light" *ngIf="settingsTabOpen == 2">
+  <div  fxLayout="row" (click)="toggleSettings(0)"
+        class="p-2 shadow"
+        fxLayoutAlign="space-between center">
+    <div  fxFlexAlign="center"><p class="lead p-2 m-0">Settings</p></div>
+    <div  fxFlexAlign="center"><mat-icon class="example-tab-icon">close</mat-icon></div>
+  </div>
+  <hr style="margin-top: 0rem;">
+  <app-settings-fragment></app-settings-fragment>
+</div>
+
+

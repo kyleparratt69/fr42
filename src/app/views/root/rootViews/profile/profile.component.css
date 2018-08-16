@@ -1,0 +1,26 @@
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  margin-bottom: 10px;
+  height: 120px !important;
+  width: 120px !important;
+}
+
+.profileHeader {
+  display: block;
+  text-align: -webkit-center;
+}
+
+.floatingButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modalfragment {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
